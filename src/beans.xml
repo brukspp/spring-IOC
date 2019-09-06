@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <bean id="helloWorld" class="com.bruk.HelloSpp">
+        <property name="Msg">
+            <value>
+                tt 112233 spp
+            </value>>
+        </property>
+    </bean>
+</beans>
