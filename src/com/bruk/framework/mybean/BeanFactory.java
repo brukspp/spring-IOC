@@ -6,13 +6,13 @@ import java.util.concurrent.ConcurrentHashMap;
 import com.bruk.framework.annotation.Bean;
 public class BeanFactory {
     private static Map<String,Object> beanMap = new ConcurrentHashMap<>(256);
-    private XmlPropertlyRead xmlread;
+    private static XmlPropertlyRead xmlread;
 
     public BeanFactory(){
         xmlread = XmlPropertlyRead.getInstance();
     }
 
-    public Object getBean(String beanName) throws Exception{
+    public static Object getBean(String beanName) throws Exception{
         if(beanMap.containsKey(beanName)){
             return beanMap.get(beanName);
         }else{
