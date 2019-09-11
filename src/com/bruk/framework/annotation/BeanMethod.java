@@ -1,4 +1,4 @@
-package com.bruk.framework.mybean;
+package com.bruk.framework.annotation;
 
 import java.lang.annotation.*;
 

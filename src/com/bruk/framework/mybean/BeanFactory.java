@@ -3,7 +3,7 @@ package com.bruk.framework.mybean;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import com.bruk.framework.mybean.Bean;
+import com.bruk.framework.annotation.Bean;
 public class BeanFactory {
     private static Map<String,Object> beanMap = new ConcurrentHashMap<>(256);
     private XmlPropertlyRead xmlread;
@@ -30,7 +30,7 @@ public class BeanFactory {
         beanMap.put(beanName,beanObj);
     }
 
-    public void annotationRegisterBean(Class<? extends Bean> cls , String beanName) throws Exception{
+    public void annotationRegisterBean(Class<?> cls , String beanName) throws Exception{
         if(!cls.isAnnotationPresent(Bean.class)){
             return;
         }
